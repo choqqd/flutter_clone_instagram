@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clone_instagram/src/components/image_data.dart';
 import 'package:flutter_clone_instagram/src/controller/bottome_nav_controller.dart';
+import 'package:flutter_clone_instagram/src/pages/active_history.dart';
 import 'package:flutter_clone_instagram/src/pages/home.dart';
 import 'package:flutter_clone_instagram/src/pages/search.dart';
 import 'package:get/get.dart';
@@ -30,12 +31,7 @@ class App extends GetView<BottomNavController> {
                 },
               ),
               const Search(),
-              Container(
-                child: Center(child: Text('UPLOAD')),
-              ),
-              Container(
-                child: Center(child: Text('ACTIVITY')),
-              ),
+              const ActiveHistory(),
               Container(
                 child: Center(child: Text('MYPAGE')),
               ),
@@ -72,7 +68,7 @@ class App extends GetView<BottomNavController> {
                   icon: Container(
                     width: 30,
                     height: 30,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.grey,
                     ),
